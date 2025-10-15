@@ -1,0 +1,112 @@
+ Calculate Factorial of a Given Number :
+#include <stdio.h> 
+int main() { 
+int n, fact = 1; 
+printf("Enter a positive integer: "); 
+scanf("%d", &n); 
+for(int i = 1; i <= n; i++) { 
+fact *= i; 
+} 
+printf("Factorial of %d is %d\n", n, fact); 
+return 0; 
+} 
+
+
+ Program to Calculate Fibonacci Series :
+#include <stdio.h> 
+int main() { 
+int n, t1 = 0, t2 = 1, nextTerm; 
+printf("Enter the number of terms: "); 
+scanf("%d", &n); 
+printf("Fibonacci Series: "); 
+for(int i = 1; i <= n; ++i) { 
+printf("%d ", t1); 
+nextTerm = t1 + t2; 
+t1 = t2; 
+t2 = nextTerm; 
+} 
+printf("\n"); 
+return 0; 
+}
+
+
+
+ Program to Calculate Multiplication Table :
+#include <stdio.h> 
+ 
+int main() { 
+    int n; 
+ 
+    printf("Enter a number: "); 
+    scanf("%d", &n); 
+ 
+    printf("Multiplication table of %d:\n", n); 
+ 
+    for(int i = 1; i <= 10; ++i) { 
+        printf("%d x %d = %d\n", n, i, n * i); 
+    } 
+ 
+    return 0; 
+} 
+
+
+
+ Read Array of Numbers and Find Sum of Array :
+#include <stdio.h> 
+int main() { 
+int n, sum = 0; 
+printf("Enter number of elements: "); 
+scanf("%d", &n); 
+int arr[n]; 
+printf("Enter %d numbers:\n", n); 
+for(int i = 0; i < n; i++) { 
+scanf("%d", &arr[i]); 
+sum += arr[i]; 
+} 
+printf("Sum of the array elements is %d\n", sum); 
+return 0; 
+} 
+
+
+
+ Program to Find Sum of Digits 
+#include <stdio.h> 
+int main() { 
+int n, sum = 0; 
+printf("Enter an integer: "); 
+scanf("%d", &n); 
+while(n != 0) { 
+sum += n % 10; 
+n /= 10; 
+} 
+printf("Sum of digits is %d\n", sum); 
+return 0; 
+} 
+
+
+
+Program to Find Armstrong Number 
+#include <stdio.h> 
+#include <math.h> 
+int main() { 
+int n, originalNum, remainder, result = 0, digits = 0; 
+printf("Enter an integer: "); 
+scanf("%d", &n); 
+originalNum = n; 
+
+while (originalNum != 0) { 
+digits++; 
+originalNum /= 10; 
+} 
+originalNum = n; 
+while (originalNum != 0) { 
+remainder = originalNum % 10; 
+result += pow(remainder, digits); 
+originalNum /= 10; 
+} 
+if(result == n) 
+printf("%d is an Armstrong number.\n", n); 
+else 
+printf("%d is not an Armstrong number.\n", n); 
+return 0; 
+} 
